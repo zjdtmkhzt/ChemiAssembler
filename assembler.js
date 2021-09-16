@@ -161,7 +161,7 @@ function assembler(intext) {
 			else if (line.substring(0,4) == 'walk'){
 				let sx = line.substring(4);
 				let dir = dirs.indexOf(sx)+1;
-				return 'sx:' + sx + ', dir:' + dir
+				// return 'sx:' + sx + ', dir:' + dir
 				app = setsx(dir);
 				fck += app+'%';
 			}
