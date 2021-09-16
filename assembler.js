@@ -42,7 +42,7 @@ function assembler(intext) {
 	let origlines = intext.split("\n");
 	
 	//List of known commands
-	let vncoms = ['mov','movall','temp','iso','pill','vial','dump','sfor'];
+	let vncoms = ['mov','movall','temp','iso','pill','vial','dump','sfor','walk'];
 	let vcoms = ['compile','end'];
 	
 	let lines = new Array(origlines.length);
