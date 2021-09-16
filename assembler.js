@@ -156,11 +156,8 @@ function assembler(intext) {
 			
 			//WALK command
 			else if (line.substring(0,4) == 'walk'){
-				alert('test')
 				let sx = Number(line.substring(4));
 				app = setsx(sx);
-				regs[3] = -1;
-				app += prepnum(sx)
 				fck += app+'%';
 			}
 			
