@@ -154,6 +154,15 @@ function assembler(intext) {
 				fck += app+',@';
 			}
 			
+			//WALK command
+			else if (line.substring(0,4) == 'walk'){
+				let sx = Number(line.substring(4));
+				app = setsx(sx);
+				regs[3] = -1;
+				app += prepnum(sx)
+				fck += app+'%';
+			}
+			
 			//VIAL command
 			else if (line.substring(0,4) == 'vial'){
 				let app = settx(12);
