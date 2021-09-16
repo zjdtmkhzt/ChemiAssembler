@@ -160,7 +160,10 @@ function assembler(intext) {
 			//WALK command
 			else if (line.substring(0,4) == 'walk'){
 				let sx = line.substring(4);
-				app = setsx(dirs.indexOf(sx)+1);
+				let dir = dirs.indexOf(sx)+1;
+				alert(sx);
+				alert(dir);
+				app = setsx(dir);
 				fck += app+'%';
 			}
 			
