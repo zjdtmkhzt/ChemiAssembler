@@ -45,6 +45,9 @@ function assembler(intext) {
 	let vncoms = ['mov','movall','temp','iso','pill','vial','dump','sfor','walk'];
 	let vcoms = ['compile','end'];
 	
+	//Directions to numbers
+	let dirs = ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw']
+	
 	let lines = new Array(origlines.length);
 	
 	for (let iter = 0; iter < origlines.length; iter++){
@@ -157,7 +160,7 @@ function assembler(intext) {
 			//WALK command
 			else if (line.substring(0,4) == 'walk'){
 				let sx = Number(line.substring(4));
-				app = setsx(sx);
+				app = setsx(dirs.indexOf(sx)+1);
 				fck += app+'%';
 			}
 			
